@@ -2,7 +2,7 @@
 <html>
     <head>
         <style type="text/css">
-        
+
             html, body {
                 background-color: #F9F9F9;
                 font-family: Open Sans, sans-serif;
@@ -183,7 +183,11 @@
      ?>
 
     <body>
-        <h1 align="center">Musical Hands</h1>
+        <div style="text-align: center;">
+            <span style="font-size:30px;">Musical Hands</span><br>
+            <span style="font-size:20px;">Seller Signup</span>
+
+        </div>
         <div class="form-outline">
             <img src="avatar.png" class="avatar">
             <form method="post" class="form-inline" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
