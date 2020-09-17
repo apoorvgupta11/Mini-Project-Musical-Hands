@@ -28,19 +28,19 @@
                 width: 300px;
                 height: auto;
                 border-radius: 3px;
-                top: 53%;
+                top: 37%;
                 left: 50%;
                 position: absolute;
                 transform: translate(-50%,-50%);
             }
 
             .form-inline input {
-              margin: 5px 10px 5px 0;
+              margin: 5px 10px 0px 0;
               padding: 10px;
               background-color: #fff;
               border: 1px solid #8E8E93;
               align: center;
-              width :100%;
+              width : 100%;
             }
 
             .form-inline input[type="password"],input[type="text"]{
@@ -57,7 +57,6 @@
                 background-color: #FF5722;
                 border-color: #ff5722;
                 border-radius: 3px;
-
             }
 
             .password {
@@ -71,41 +70,35 @@
                 top:15px;
             }
 
-            select:focus, input:focus{
+            input:focus{
                 outline: none;
                 border:1px solid #8E8E93;
             }
-
-            select{
-                margin: 5px 10px 5px 0;
-                padding: 10px;
-                background-color: #fff;
-                border: 1px solid #e0e0e0;
-                align: center;
-                width: 100%;
+            .text-light{
+                color: #9b9b9b;
+                font-size: 12px;
+                text-align: center;
+                margin-bottom: 20px;
+                text-decoration:none;
             }
 
 
+            a:visited {
+              color: #9b9b9b;
+              text-decoration: none;
+              cursor: auto;
+            }
 
         </style>
     </head>
 
     <?php
-        $name = "";
         $password = "";
-        $cnf_password = "";
-        $gstin = "";
         $username = "";
-        $nameErr = "";
         $usernameErr = "";
         $passwordErr = "";
-        $cnf_passwordErr = "";
-        $locationErr = "";
-        $gstinErr = "";
 
         $passwordErrShow = "";
-        $cnf_passwordErrShow = "";
-
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Username
@@ -119,30 +112,6 @@
               $passwordErr = "* Password is required";
             else
               $password = test_input($_POST["password"]);
-
-            if (empty($_POST["cnf_password"]))
-                $cnf_passwordErr = "* Password is required";
-            else
-                $cnf_password = test_input($_POST["cnf_password"]);
-
-            // Name
-            if (empty($_POST["name"]))
-                $nameErr = "* Name is required";
-            else
-                $name = test_input($_POST["name"]);
-
-            // Location
-            $location = $_POST['locations'];
-
-            if ($location == "Empty")
-                $locationErr = "* Select Correct Location";
-
-            //GSTIN
-            if (empty($_POST["gstin"]))
-                $gstinErr = "* GSTIN Number is required";
-            else
-                $gstin = test_input($_POST["gstin"]);
-
         }
 
 
@@ -172,24 +141,15 @@
                 $passwordErr = "* Include at least one number.";
             elseif (!$specialChars)
                 $passwordErr = "* Include at least one special character.";
-            elseif (strcmp($cnf_password, $password)!=0)
-                $cnf_passwordErr = "* Passwords do not match.";
-            elseif (strcmp($cnf_password, $password)==0)
+            else
                 $passwordErr = "";
-
-            // GST
-            $pattern = "/[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[0-9]{1}[A-Z]{1}[0-9]{1}/";
-            $check = preg_match($pattern, $gstin);
-
-            if (!$check)
-                $gstinErr = "* Enter Valid GST Number";
 
             if(!filter_var($username, FILTER_VALIDATE_EMAIL))
                 $usernameErr = "* Invalid Username";
 
 
             // redirect to new page
-            if ($passwordErr=="" && $cnf_passwordErr=="" && $gstinErr=="" && $usernameErr=="" && $locationErr=="" && $nameErr==""){
+            if ($passwordErr=="" && $usernameErr==""){
                 header('Location: http://localhost/WP2/Mini%20Project/cookie.php?name='.$name.'&username='.$username.'&location='.$location);
                 exit();
             }
@@ -200,17 +160,15 @@
         <div style="text-align: center;">
             <span style="font-size:30px;">Musical Hands</span><br>
         </div>
-
+        <br>
         <div class="form-outline">
             <div style="text-align: center;">
-                <span style="font-size:20px;">Seller Signup</span>
+                <span style="font-size:20px;">Login</span>
             </div>
             <br>
 
             <img src="avatar.png" class="avatar">
             <form method="post" class="form-inline" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                <input type="text" name="name" placeholder="Company/Business name" value="<?php echo $name;?>"><br>
-                <span class="error"><?php echo $nameErr;?> </span> <br>
 
                 <input type="text" name="username" placeholder="Email Id" value="<?php echo $username;?>"><br>
                 <span class="error"><?php echo $usernameErr;?> </span> <br>
@@ -219,27 +177,17 @@
                     <input type="password" name="password" placeholder="Password" id="pass" value="<?php echo $password;?>">
                     <img class="pass-img" src="eye1.png" alt="" id="eye_img" onclick="myFunction()">
                 </div>
-
                 <span class="error"><?php echo $passwordErr;?></span> <br>
-                <input type="password" name="cnf_password" placeholder="Confirm Password" value="<?php echo $cnf_password;?>"><br>
-                <span class="error"><?php echo $cnf_passwordErr;?> </span> <br>
-
-                <select name="locations" style="color:#757575">
-                  <option value="Empty"> --- Select Location ---</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Pune">Pune</option>
-                  <option value="Delhi">Delhi</option>
-                  <option value="Banglore">Banglore</option>
-                  <option value="Chennai">Chennai</option>
-                  <option value="Kolkata">Kolkata</option>
-                </select> <br>
-                <span class="error"><?php echo $locationErr;?> </span> <br>
-
-                <input type="text" name="gstin" placeholder="GSTIN Number" value="<?php echo $gstin;?>"><br>
-                <span class="error">  <?php echo $gstinErr;?> </span>
 
                 <input type="submit" name="submit" value="Sign Up">
                 <br><br>
+
+                <div class="text-light">
+                    <a href="" style="text-decoration:none;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#9b9b9b'">
+                        Forgot password ?
+                    </a>
+                </div>
+
             </form>
         </div>
 
@@ -258,7 +206,6 @@
                 img.src = "eye2.png";
               else
                 img.src = "eye1.png";
-
             }
         </script>
     </body>
