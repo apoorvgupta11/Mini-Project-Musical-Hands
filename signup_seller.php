@@ -2,14 +2,10 @@
 <html>
     <head>
         <style type="text/css">
-
-            /* cookie - set the cookie
-            login - display cookie value and logout button
-            logout - destroy cookie */
-
+        
             html, body {
                 background-color: #F9F9F9;
-                font-family: sans-serif;
+                font-family: Open Sans, sans-serif;
             }
 
             .avatar{
