@@ -8,11 +8,8 @@
             logout - destroy cookie */
 
             html, body {
-                /* height: 100%; */
-                /* background-color: #F9F8F9; */
-                /* background-color: #E5F9F7; */
                 background-color: #F9F9F9;
-                /*background-image: linear-gradient(to right, #21007E, #E51EB6); */
+                font-family: sans-serif;
             }
 
             .avatar{
@@ -22,7 +19,10 @@
                 left: calc(50% - 50px);
             }
 
-            .error {color: #FF0000;}
+            .error {
+                color: #FF0000;
+                font-size: 13px;
+            }
 
             .form-inline input {
               margin: 5px 10px 5px 0;
@@ -30,40 +30,47 @@
               background-color: #fff;
               border: 1px solid #8E8E93;
               align: center;
+              width :85%;
             }
 
             .form-inline input[type="password"],input[type="text"]{
-                width :80%;
+                border: 1px solid #e0e0e0;
+                border-radius: 3px;
+                color: #4a4a4a;
+                box-sizing: border-box;
             }
 
             .form-inline input[type="submit"]{
-                width :85%;
                 margin-top: 20px;
-                background-color: #FF5722;
-                color: white;
                 font-size: 15px;
+                color: white;
+                background-color: #FF5722;
+                border-color: #ff5722;
+
+            }
+
+            select:focus, input:focus{
+                outline: none;
+                border:1px solid #8E8E93;
             }
 
             select{
                 margin: 5px 10px 5px 0;
                 padding: 10px;
                 background-color: #fff;
-                border: 1px solid #8E8E93;
+                border: 1px solid #e0e0e0;
                 align: center;
                 width: 85%;
             }
 
             .form-outline{
-                /* background-color: #F4F4F4; */
-                /* background-color: #D2D6DE; */
                 background-color: #fff;
                 border: 3px solid #eee;
                 box-shadow: 1px 1px 4px #eee;
-                /* border-style: outset; */
                 padding: 40px 0px 0px 50px;
                 width: 400px;
                 height: auto;
-                border-radius: 5px;
+                border-radius: 3px;
                 top: 55%;
                 left: 50%;
                 position: absolute;
@@ -184,17 +191,20 @@
         <div class="form-outline">
             <img src="avatar.png" class="avatar">
             <form method="post" class="form-inline" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                Company/Business name <span class="error">  <?php echo $nameErr;?> </span> <br> <input type="text" name="name" value="<?php echo $name;?>"><br><br>
+                <input type="text" name="name" placeholder="Company/Business name" value="<?php echo $name;?>"><br>
+                <span class="error"><?php echo $nameErr;?> </span> <br>
 
-                Email Id <span class="error"><?php echo $usernameErr;?> </span> <br> <input type="text" name="username" value="<?php echo $username;?>"><br><br>
+                <input type="text" name="username" placeholder="Email Id" value="<?php echo $username;?>"><br>
+                <span class="error"><?php echo $usernameErr;?> </span> <br>
 
-                Password <span class="error"><?php echo $passwordErr;?> </span> <br> <input type="password" name="password" id="pass" value="<?php echo $password;?>">
+                <input type="password" name="password" placeholder="Password" id="pass" value="<?php echo $password;?>">
                 <img src="eye1.png" alt="" id="eye_img" height="20px" onclick="myFunction()">
-                <br><br>
-                Confirm Password <span class="error"><?php echo $cnf_passwordErr;?> </span> <br> <input type="password" name="cnf_password" value="<?php echo $cnf_password;?>"><br><br>
+                <br>
+                <span class="error"><?php echo $passwordErr;?></span> <br>
+                <input type="password" name="cnf_password" placeholder="Confirm Password" value="<?php echo $cnf_password;?>"><br>
+                <span class="error"><?php echo $cnf_passwordErr;?> </span> <br>
 
-                Your Location <span class="error"><?php echo $locationErr;?> </span> <br>
-                <select name="locations">
+                <select name="locations" style="color:#757575">
                   <option value="Empty"> --- Select Location ---</option>
                   <option value="Mumbai">Mumbai</option>
                   <option value="Pune">Pune</option>
@@ -202,12 +212,13 @@
                   <option value="Banglore">Banglore</option>
                   <option value="Chennai">Chennai</option>
                   <option value="Kolkata">Kolkata</option>
-                </select> <br><br>
+                </select> <br>
+                <span class="error"><?php echo $locationErr;?> </span> <br>
 
-                GSTIN Number <span class="error">  <?php echo $gstinErr;?> </span> <br> <input type="text" name="gstin" value="<?php echo $gstin;?>">
+                <input type="text" name="gstin" placeholder="GSTIN Number" value="<?php echo $gstin;?>"><br>
+                <span class="error">  <?php echo $gstinErr;?> </span> <br>
 
                 <input type="submit" name="submit" value="Sign Up">
-
                 <br><br>
             </form>
         </div>
