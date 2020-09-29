@@ -158,7 +158,8 @@
 
             // redirect to new page
             if ($passwordErr=="" && $cnf_passwordErr=="" && $usernameErr=="" && $nameErr==""){
-                header('Location: http://localhost/WP2/Mini%20Project/cookie.php?name='.$name.'&username='.$username.'&location='.$location);
+                //header('Location: http://localhost/WP2/Mini%20Project/cookie.php?name='.$name.'&username='.$username.'&location='.$location);
+                header('Location: http://localhost/WP2/Mini%20Project/login.php?');
                 exit();
             }
         }

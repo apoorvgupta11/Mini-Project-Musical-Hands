@@ -150,7 +150,7 @@
 
             // redirect to new page
             if ($passwordErr=="" && $usernameErr==""){
-                header('Location: http://localhost/WP2/Mini%20Project/cookie.php?name='.$name.'&username='.$username.'&location='.$location);
+                header('Location: http://localhost/WP2/Mini%20Project/logincookie.php?&username='.$username);
                 exit();
             }
         }
@@ -179,7 +179,7 @@
                 </div>
                 <span class="error"><?php echo $passwordErr;?></span> <br>
 
-                <input type="submit" name="submit" value="Sign Up">
+                <input type="submit" name="submit" value="Sign in">
                 <br><br>
 
                 <div class="text-light">
