@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,13 +9,6 @@
             $username_value = $_GET['username'];
 
             setcookie($username, $username_value, time()+60*30, "/");
-
-            // if(!isset($_COOKIE[$username])) {
-            //   echo "Cookie is not set!";
-            // } else {
-            //   echo "<br/>Cookie '" . $username . "' is set!<br>";
-            //   echo "Value is: " . $_COOKIE[$username];
-            // }
         ?>
     </body>
 

@@ -1,8 +1,4 @@
 <?php
-// setcookie("name", "", time() - 3600);
-// setcookie("username", "", time() - 3600);
-// setcookie("location", "", time() - 3600);
-
 setcookie('name', null, -1, '/');
 setcookie('username', null, -1, '/');
 setcookie('location', null, -1, '/');

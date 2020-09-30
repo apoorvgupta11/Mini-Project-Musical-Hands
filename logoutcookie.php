@@ -1,5 +1,9 @@
 <?php
+    session_start();
     setcookie('username', null, -1, '/');
+
+    session_unset();
+    session_destroy();
 ?>
 
 <script type="text/javascript">

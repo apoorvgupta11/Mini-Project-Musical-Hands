@@ -1,6 +1,4 @@
-<?php
-
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -83,21 +81,74 @@
                 color: #FF5722 !important;
             }
 
+            /* MODAL */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            /* Modal Content Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 4% auto 15% auto;
+                border: 1px solid #888;
+                width: 30%;
+                padding-bottom: 20px;
+            }
+
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+            .animate {
+                animation: zoom 0.6s
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* Location pin */
+            input{
+                text-align: center;
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+
         </style>
     </head>
 
-    <?php
-        session_start();
-    ?>
 
     <body>
-
         <p class="display-4 text-center pt-2">Musical Hands</p>
         <p class="text-center lead" >Your Cart</p>
 
         <!-- Navbar -->
         <nav class="navbar navbar-expand navbar-light navbar-color">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -107,6 +158,13 @@
                     <li class="nav-item active ">
                         <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                     </li>
+
+                    <?php if(isset($_SESSION['location']) && !empty($_SESSION['location'])){ ?>
+                        <li class="nav-item active ">
+                            <a class="nav-link" onclick="document.getElementById('modal-wrapper').style.display='block'"> <img src="images/placeholder.png" height="17px;" alt="No "> <?php echo $_SESSION['location']; ?> </a>
+                        </li>
+                    <?php } ?>
+
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
@@ -123,6 +181,18 @@
                     </li> -->
                 </ul>
 
+                <!-- Modal -->
+                <div id="modal-wrapper" class="modal">
+                    <form class="modal-content animate" action="location_session.php" method="post">
+                        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp" style="margin-top:15px">&times;</span>
+                        <h4 style="text-align:center; margin-top:15px;">Enter your Location</h4>
+
+                        <br>
+                        <input type="text" name="location">
+                        <br>
+                        <input type="submit" name="submit" value="Save">
+                    </form>
+                </div>
 
                 <?php if(!isset($_COOKIE['username'])) { ?>
                     <ul class="navbar-nav ml-auto">
@@ -221,6 +291,6 @@
 
         </div>
 
-    
+
     </body>
 </html>

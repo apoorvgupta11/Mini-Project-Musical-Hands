@@ -3,7 +3,6 @@
     <head>
         <title>Musical Hands</title>
 
-
         <!-- CSS only -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -49,16 +48,71 @@
               /* transform: rotate(-40deg); */
             }
 
+            /* MODAL */
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            /* Modal Content Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 4% auto 15% auto;
+                border: 1px solid #888;
+                width: 30%;
+                padding-bottom: 20px;
+            }
+
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+            .animate {
+                animation: zoom 0.6s
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* Location pin */
+
+            input{
+                text-align: center;
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+
         </style>
-
-
     </head>
+    <?php session_start(); ?>
+
     <body>
-
-        <!-- <div style="text-align: center;">
-            <span style="font-size:50px;">Musical Hands</span><br>
-        </div> -->
-
         <p class="display-4 text-center pt-2">Musical Hands</p>
         <p class="text-center lead" >Start Your Musical Journey here</p>
 
@@ -74,6 +128,14 @@
                     <li class="nav-item active ">
                         <a class="nav-link"  href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
+
+
+                    <?php if(isset($_SESSION['location']) && !empty($_SESSION['location'])){ ?>
+                        <li class="nav-item active ">
+                            <a class="nav-link" onclick="document.getElementById('modal-wrapper').style.display='block'"> <img src="images/placeholder.png" height="17px;" alt="No "> <?php echo $_SESSION['location']; ?> </a>
+                        </li>
+                    <?php } ?>
+
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
@@ -112,12 +174,21 @@
                     </ul>
                 <?php } ?>
 
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
             </div>
         </nav>
+
+        <!-- Modal -->
+        <div id="modal-wrapper" class="modal">
+            <form class="modal-content animate" action="location_session.php" method="post">
+                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp" style="margin-top:15px">&times;</span>
+                <h4 style="text-align:center; margin-top:15px;">Enter your Location</h4>
+
+                <br>
+                <input type="text" name="location">
+                <br>
+                <input type="submit" name="submit" value="Save">
+            </form>
+        </div>
 
         <!-- Carousel -->
         <div id="carouselExampleIndicators" class="carousel slide ml-auto mr-auto" data-ride="carousel">
@@ -152,7 +223,6 @@
 
         <!-- Card -->
         <!-- Today's Deal -->
-
         <div class="row">
             <div class="col-md-3">
                 <div class="card shadow ml-5 mt-5 pt-3" style="width: 19rem;">
@@ -213,16 +283,16 @@
 
     <script type="text/javascript">
 
+        <?php if(!isset($_SESSION['location']) && empty($_SESSION['location'])){ ?>
+            window.onload(document.getElementById('modal-wrapper').style.display='block')
+        <?php } ?>
 
-    // function deleteCookie(){
-    //     name = "username";
-    //     console.log(document.cookie);
-    //
-    //     document.cookie = name+'="";-1; path=/';
-    //
-    //     console.log(document.cookie);
-    //
-    // }
 
+        var modal = document.getElementById('modal-wrapper');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </html>
