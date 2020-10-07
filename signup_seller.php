@@ -49,6 +49,7 @@
 
                 <input type="text" name="gstin" placeholder="GSTIN Number" value="<?php echo $gstin;?>"><br>
                 <span class="error">  <?php echo $gstinErr;?> </span>
+                <span class="error"><?php echo $availabilityErr;?> </span> <br>
 
                 <input type="submit" name="submit" value="Sign Up">
                 <br><br>

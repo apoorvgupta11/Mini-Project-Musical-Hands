@@ -34,6 +34,7 @@
                 <span class="error"><?php echo $passwordErr;?></span> <br>
                 <input type="password" name="cnf_password" placeholder="Confirm Password" value="<?php echo $cnf_password;?>"><br>
                 <span class="error"><?php echo $cnf_passwordErr;?> </span> <br>
+                <span class="error"><?php echo $availabilityErr;?> </span> <br>
 
                 <input type="submit" name="submit" value="Sign Up">
                 <br><br>

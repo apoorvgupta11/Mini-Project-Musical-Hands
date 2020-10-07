@@ -10,6 +10,7 @@
     $cnf_passwordErr = "";
     $locationErr = "";
     $gstinErr = "";
+    $availabilityErr = "";
 
     $passwordErrShow = "";
     $cnf_passwordErrShow = "";
@@ -98,8 +99,31 @@
 
         // redirect to new page
         if ($passwordErr=="" && $cnf_passwordErr=="" && $gstinErr=="" && $usernameErr=="" && $locationErr=="" && $nameErr==""){
-            header('Location: http://localhost/WP2/Mini%20Project/cookie.php?name='.$name.'&username='.$username.'&location='.$location);
-            exit();
+
+            $password = md5($password);             //md5 hashing
+            $uid = substr(uniqid(), 0, 10);         //unique id
+            $db = mysqli_connect('localhost','root','', 'mini_project') or die('Error in connect to MySQl Server');
+
+            // Check duplicate email
+            $query = "select *from user where username = '$username'";
+            $result = mysqli_query($db, $query);
+            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            $count = mysqli_num_rows($result);
+
+            if($count != 0)
+                $availabilityErr = "Username already Exists choose different username";
+            else{
+                $order = "INSERT INTO user(uid, name, username, password, type) VALUES ('$uid', '$name', '$username', '$password', 1)";
+                $result = mysqli_query($db, $order);
+
+                if($result)
+                    header('Location: http://localhost/WP2/Mini%20Project/login.php');
+                else
+                    echo "<br/>Input data is fail<br/>";
+            }
+
+            mysqli_close($db);
+
         }
     }
  ?>

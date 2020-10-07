@@ -29,6 +29,7 @@
                     <img class="pass-img" src="images/login/eye1.png" alt="" id="eye_img" onclick="myFunction()">
                 </div>
                 <span class="error"><?php echo $passwordErr;?></span> <br>
+                <span class="error"><?php echo $invalidErr;?></span> <br>
 
                 <input type="submit" name="submit" value="Sign in">
                 <br><br>
