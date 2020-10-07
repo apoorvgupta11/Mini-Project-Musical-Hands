@@ -16,7 +16,7 @@
 
 
     <body>
-        <p class="display-4 text-center pt-2">Musical Hands</p>
+        <p class="display-4 text-center pt-2"><a style="text-decoration: none; color:black" href="home.php">Musical Hands</a></p>
         <p class="text-center lead" >Your Cart</p>
 
         <!-- Navbar -->

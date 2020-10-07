@@ -9,7 +9,7 @@
 
     <body>
         <div style="text-align: center;">
-            <span style="font-size:30px;">Musical Hands</span><br>
+            <span style="font-size:30px;"><a style="text-decoration: none; color:black" href="home.php">Musical Hands</a></span><br>
         </div>
         <br>
         <div class="form-outline">
