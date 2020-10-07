@@ -11,104 +11,10 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-        <style>
 
-            html, body {
-                background-color: #F9F9F9;
-                font-family: Open Sans, sans-serif;
-            }
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/homeStyles.css">
 
-            .nav-link{
-                color: #ff9878 !important;
-            }
-            .nav-link:hover{
-                color: #FF5722 !important;
-            }
-
-            .carousel {
-              width:850px;
-              height:360px;
-            }
-
-            .btn-outline-primary{
-                color: #FF5722 !important;
-                border-color: #FF5722 !important;
-            }
-            .btn-outline-primary:hover{
-                color: #FFF !important;
-                background-color: #FF5722 !important;
-            }
-
-            .todays_deal {
-              width: 130px;
-              text-align: center;
-              color: #fff;
-              background-color: #12B312;
-              border-radius: 3px;
-              /* transform: rotate(-40deg); */
-            }
-
-            /* MODAL */
-
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background-color: rgba(0, 0, 0, 0.4);
-            }
-
-            /* Modal Content Box */
-            .modal-content {
-                background-color: #fefefe;
-                margin: 4% auto 15% auto;
-                border: 1px solid #888;
-                width: 30%;
-                padding-bottom: 20px;
-            }
-
-            .close {
-                position: absolute;
-                right: 25px;
-                top: 0;
-                color: #000;
-                font-size: 35px;
-                font-weight: bold;
-            }
-
-            .close:hover,
-            .close:focus {
-                color: red;
-                cursor: pointer;
-            }
-
-            .animate {
-                animation: zoom 0.6s
-            }
-
-            @keyframes zoom {
-                from {
-                    transform: scale(0)
-                }
-
-                to {
-                    transform: scale(1)
-                }
-            }
-
-            /* Location pin */
-
-            input{
-                text-align: center;
-                margin-left: 50px;
-                margin-right: 50px;
-            }
-
-        </style>
     </head>
     <?php session_start(); ?>
 
@@ -168,7 +74,7 @@
                             <a class="nav-link" href="cart.php">Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="logoutcookie.php">Logout</a>
+                            <a class="nav-link" href="helper_files/logoutcookie_session.php">Logout</a>
                         </li>
 
                     </ul>
@@ -179,7 +85,7 @@
 
         <!-- Modal -->
         <div id="modal-wrapper" class="modal">
-            <form class="modal-content animate" action="location_session.php" method="post">
+            <form class="modal-content animate" action="helper_files/location_session.php" method="post">
                 <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp" style="margin-top:15px">&times;</span>
                 <h4 style="text-align:center; margin-top:15px;">Enter your Location</h4>
 
