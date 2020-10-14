@@ -89,7 +89,7 @@
             if($countUsername == 0 && $countBoth == 0){
                 $invalidErr = "* User doesn't exists. Please Register First <a href='http://localhost/WP2/Mini%20Project/signup_user.php'> Here </a>";
             } else if($countUsername == 1 && $countBoth == 0){
-                $invalidErr = "* Please Enter Correct Password";
+                $invalidErr = "* Password Or Usesrname does not matches ";
             } else if ($countUsername == 1 && $countBoth ==1){
                 $invalidErr = "";
                 header('Location: http://localhost/WP2/Mini%20Project/helper_files/logincookie.php?&username='.$username);
