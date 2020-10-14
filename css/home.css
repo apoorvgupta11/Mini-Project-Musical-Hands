@@ -24,6 +24,11 @@ html, body {
     background-color: #FF5722 !important;
 }
 
+.heading {
+    text-align: center;
+    font-size: 30px;
+}
+
 .todays_deal {
   width: 130px;
   text-align: center;

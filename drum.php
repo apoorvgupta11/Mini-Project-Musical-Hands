@@ -13,7 +13,7 @@
 
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/instrument.css">
 
     </head>
     <?php session_start(); ?>
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active ">
-                        <a class="nav-link"  href="#">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link"  href="home.php">HOME <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -111,148 +111,122 @@
             </form>
         </div>
 
-        <!-- Carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide ml-auto mr-auto" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/guitar.png" alt="First slide" >
-                    </div>
-                    <div class="carousel-item ">
-                        <img class="d-block w-100" src="images/trumpet.png" alt="First slide" >
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="images/keyboard.png" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="images/guitar2.png" alt="Third slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-        </div>
 
         <!-- Card -->
         <!-- Today's Deal -->
         <br>
-        <div class="heading"> Today's Deal</div>
         <br>
         <div class="row">
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
-                    <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
+                    <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">₹ 17999</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar, J-45 Studio -Antique Natural RS4SANN19</p>
+                        <p class="card-text">Zildjian Cymbals ZBT-Plus 40cm Splash</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar2.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">₹ 17700</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar, L-00 Studio -Antique Natural LSLSANN19</p>
+                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar3.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">₹ 23380</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar,Humminbird, Walnut Burst AGHBWBN19</p>
+                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul Muse-Scarlett Red Metallic ENMLSRMNH1</p>
+                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
+                    <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">₹ 47069</h5>
+                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
+                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <br>
-        <div class="heading"> New Arrivals</div>
         <br>
         <div class="row">
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
                     <div class="card-body">
                         <h5 class="card-title">₹ 17999</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar, J-45 Studio -Antique Natural RS4SANN19</p>
+                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar2.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">₹ 17700</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar, L-00 Studio -Antique Natural LSLSANN19</p>
+                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar3.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">₹ 23380</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar,Humminbird, Walnut Burst AGHBWBN19</p>
+                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                    <div class="todays_deal">Today's Deal</div>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul Muse-Scarlett Red Metallic ENMLSRMNH1</p>
+                        <p class="card-text">Epiphone, Electric Guitar, Les Paul</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
+                    <img class="card-img-top" src="images/guitar/guitar3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">₹ 23380</h5>
+                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
