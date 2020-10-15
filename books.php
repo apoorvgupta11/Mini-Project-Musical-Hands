@@ -113,16 +113,15 @@
 
 
         <!-- Card -->
-        <!-- Today's Deal -->
         <br>
         <br>
         <div class="row">
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/books/books1.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 17999</h5>
-                        <p class="card-text">Zildjian Cymbals ZBT-Plus 40cm Splash</p>
+                        <h5 class="card-title">₹ 1799</h5>
+                        <p class="card-text">Rockschool, Vocals for Male Singers</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -130,10 +129,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar2.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/books/books5.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 17700</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <h5 class="card-title">₹ 700</h5>
+                        <p class="card-text">Trinity College Sound at Sight, Violin /Initial</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -141,10 +140,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar3.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/books/books2.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 23380</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <h5 class="card-title">₹ 233</h5>
+                        <p class="card-text">Rockschool, Music Production</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -152,10 +151,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/books/books3.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
+                        <h5 class="card-title">₹ 470</h5>
+                        <p class="card-text">Trinity College Electronic Keyboard Examination </p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -163,10 +162,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/books/books4.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
+                        <h5 class="card-title">₹ 799</h5>
+                        <p class="card-text">Theory of Music Papers Trinity</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>

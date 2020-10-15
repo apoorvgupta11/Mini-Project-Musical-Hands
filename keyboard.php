@@ -113,16 +113,15 @@
 
 
         <!-- Card -->
-        <!-- Today's Deal -->
         <br>
         <br>
         <div class="row">
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/keyboard/keyboard1.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 17999</h5>
-                        <p class="card-text">Zildjian Cymbals ZBT-Plus 40cm Splash</p>
+                        <h5 class="card-title">₹ 7999</h5>
+                        <p class="card-text">Casio Electronic Keyboard MA-150</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -130,10 +129,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar2.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/keyboard/keyboard2.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 17700</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <h5 class="card-title">₹ 28350</h5>
+                        <p class="card-text">Roland, Electronic Keyboard E-09IN </p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -141,10 +140,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar3.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/keyboard/keyboard3.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 23380</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <h5 class="card-title">₹ 8380</h5>
+                        <p class="card-text">Electronic Keyboard CTK-6300 IN</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -152,10 +151,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/keyboard/keyboard4.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
+                        <h5 class="card-title">₹ 23069</h5>
+                        <p class="card-text">Yamaha, Electronic Keyboard PSR-I455 </p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -163,10 +162,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/keyboard/keyboard5.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
+                        <h5 class="card-title">₹ 36069</h5>
+                        <p class="card-text">Korg, Keyboard Stand, Standard-M-SV</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -180,8 +179,8 @@
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
                     <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 17999</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <h5 class="card-title">₹ 28350</h5>
+                        <p class="card-text"> Keyboard Stand, Standard-M-SV</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>

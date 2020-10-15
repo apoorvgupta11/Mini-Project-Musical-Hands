@@ -113,16 +113,15 @@
 
 
         <!-- Card -->
-        <!-- Today's Deal -->
         <br>
         <br>
         <div class="row">
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/accessories/accessories1.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 17999</h5>
-                        <p class="card-text">Zildjian Cymbals ZBT-Plus 40cm Splash</p>
+                        <h5 class="card-title">₹ 3375</h5>
+                        <p class="card-text">Hercules, Autolok Speaker Stand</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -130,10 +129,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar2.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/accessories/accessories2.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 17700</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <h5 class="card-title">₹ 12550</h5>
+                        <p class="card-text">Pure Acoustic, Portable Speakers -Black</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -141,10 +140,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar3.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/accessories/accessories3.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 23380</h5>
-                        <p class="card-text">Gibson, Acoustic Electric Guitar</p>
+                        <h5 class="card-title">₹ 79500</h5>
+                        <p class="card-text">Audient, Microphone Preamplifier</p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -152,10 +151,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/accessories/accessories4.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
+                        <h5 class="card-title">₹ 26069</h5>
+                        <p class="card-text">JBL, Loudspeakers,  </p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
@@ -163,10 +162,10 @@
 
             <div class="col-md-2 mr-3 ml-3">
                 <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="images/guitar/guitar4.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/accessories/accessories5.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">₹ 47069</h5>
-                        <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
+                        <h5 class="card-title">₹ 5000</h5>
+                        <p class="card-text">Koss, Headphone TD85 </p>
                         <a href="#" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
