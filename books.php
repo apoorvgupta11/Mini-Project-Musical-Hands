@@ -122,7 +122,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 1799</h5>
                         <p class="card-text">Rockschool, Vocals for Male Singers</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 700</h5>
                         <p class="card-text">Trinity College Sound at Sight, Violin /Initial</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 233</h5>
                         <p class="card-text">Rockschool, Music Production</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 470</h5>
                         <p class="card-text">Trinity College Electronic Keyboard Examination </p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 799</h5>
                         <p class="card-text">Theory of Music Papers Trinity</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>

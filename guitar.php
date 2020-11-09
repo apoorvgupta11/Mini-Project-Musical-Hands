@@ -123,7 +123,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 17999</h5>
                         <p class="card-text">Zildjian Cymbals ZBT-Plus 40cm Splash</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 17700</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 23380</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 47069</h5>
                         <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 47069</h5>
                         <p class="card-text">Epiphone, Electric Guitar, Les Paul </p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>

@@ -122,7 +122,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 7999</h5>
                         <p class="card-text">Casio Electronic Keyboard MA-150</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 28350</h5>
                         <p class="card-text">Roland, Electronic Keyboard E-09IN </p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 8380</h5>
                         <p class="card-text">Electronic Keyboard CTK-6300 IN</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 23069</h5>
                         <p class="card-text">Yamaha, Electronic Keyboard PSR-I455 </p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 36069</h5>
                         <p class="card-text">Korg, Keyboard Stand, Standard-M-SV</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                     </div>
                 </div>
             </div>

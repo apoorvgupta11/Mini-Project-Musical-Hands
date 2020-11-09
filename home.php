@@ -155,7 +155,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 17999</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, J-45 Studio -Antique Natural RS4SANN19</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 17700</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, L-00 Studio -Antique Natural LSLSANN19</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 23380</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar,Humminbird, Walnut Burst AGHBWBN19</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
@@ -194,7 +194,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 47069</h5>
                         <p class="card-text">Epiphone, Electric Guitar, Les Paul Muse-Scarlett Red Metallic ENMLSRMNH1</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
@@ -212,7 +212,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 17999</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, J-45 Studio -Antique Natural RS4SANN19</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 17700</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, L-00 Studio -Antique Natural LSLSANN19</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
@@ -238,7 +238,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 23380</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar,Humminbird, Walnut Burst AGHBWBN19</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
@@ -251,7 +251,7 @@
                     <div class="card-body">
                         <h5 class="card-title">₹ 47069</h5>
                         <p class="card-text">Epiphone, Electric Guitar, Les Paul Muse-Scarlett Red Metallic ENMLSRMNH1</p>
-                        <a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
                         <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
                     </div>
                 </div>
