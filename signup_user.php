@@ -34,10 +34,18 @@
                 <span class="error"><?php echo $passwordErr;?></span> <br>
                 <input type="password" name="cnf_password" placeholder="Confirm Password" value="<?php echo $cnf_password;?>"><br>
                 <span class="error"><?php echo $cnf_passwordErr;?> </span> <br>
-                <span class="error"><?php echo $availabilityErr;?> </span> <br>
+                <span class="error"><?php echo $availabilityErr;?> </span>
 
                 <input type="submit" name="submit" value="Sign Up">
                 <br><br>
+
+                <div class="text-light">
+                    <a href="signup_seller.php" style="text-decoration:none;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#9b9b9b'">
+                        Register as Seller ?
+                    </a>
+                </div>
+                <br>
+
             </form>
         </div>
 

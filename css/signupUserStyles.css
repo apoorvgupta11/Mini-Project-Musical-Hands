@@ -69,3 +69,17 @@ input:focus {
     outline: none;
     border: 1px solid #8E8E93;
 }
+
+.text-light {
+    color: #9b9b9b;
+    font-size: 14px;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #9b9b9b;
+    text-decoration: none;
+    cursor: auto;
+}

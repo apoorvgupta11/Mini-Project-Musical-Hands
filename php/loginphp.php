@@ -1,6 +1,7 @@
 <?php
     $password = "";
     $username = "";
+    $type = "";
     $usernameErr = "";
     $passwordErr = "";
     $invalidErr = "";
@@ -85,6 +86,8 @@
             // $row = mysqli_fetch_array($resultBoth, MYSQLI_ASSOC);
             $countBoth = mysqli_num_rows($resultBoth);
 
+            $row = mysqli_fetch_assoc($resultBoth);
+            $type = $row["type"];
 
             if($countUsername == 0 && $countBoth == 0){
                 $invalidErr = "* User doesn't exists. Please Register First <a href='http://localhost/WP2/Mini%20Project/signup_user.php'> Here </a>";
@@ -92,7 +95,7 @@
                 $invalidErr = "* Password Or Usesrname does not matches ";
             } else if ($countUsername == 1 && $countBoth ==1){
                 $invalidErr = "";
-                header('Location: http://localhost/WP2/Mini%20Project/helper_files/logincookie.php?&username='.$username);
+                header('Location: http://localhost/WP2/Mini%20Project/helper_files/logincookie.php?&username='.$username.'&type='.$type);
             }
 
             mysqli_close($db);

@@ -1,0 +1,20 @@
+html, body {
+    background-color: #F9F9F9;
+    font-family: Open Sans, sans-serif;
+}
+
+.btn-outline-primary{
+    color: #FF5722 !important;
+    border-color: #FF5722 !important;
+    width: 100%;
+
+}
+.btn-outline-primary:hover{
+    color: #FFF !important;
+    background-color: #FF5722 !important;
+    width: 100%;
+}
+
+.text-large {
+  font-size: 125%;
+}
