@@ -33,7 +33,7 @@
         }
     } else {
         window.onload = function() {
-            window.location.href = "http://localhost/WP2/Mini%20Project/home_seller.php";
+            window.location.href = "http://localhost/WP2/Mini%20Project/add_product.php";
         }
     }
 

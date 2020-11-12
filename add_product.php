@@ -21,10 +21,10 @@
 
     </head>
 
-    <?php include 'php/homeSellerphp.php'; ?>
+    <?php include 'php/addProductphp.php'; ?>
 
     <body>
-        <p class="display-4 text-center pt-2">Seller Page</p>
+        <p class="display-4 text-center pt-2"><a style="text-decoration: none; color:black" href="home.php">Musical Hands</a></p>
         <p class="text-center lead" >Add Product</p>
 
 
@@ -52,7 +52,7 @@
                     <input class="form-control pt-4 pb-4" type="number" placeholder="Quantity" name="quantity" value="<?php echo $quantity;?>" />
                     <span class="error"><?php echo $quantityErr;?> </span> <br>
                 </div>
-                
+
                 <input type="submit" class="btn btn-outline-primary mb-3 text-large" name="submit" value="Add Product">
 
             </form>

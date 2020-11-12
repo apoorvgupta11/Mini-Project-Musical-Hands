@@ -78,20 +78,27 @@
                     </ul>
                 <?php } else { ?>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                My Account
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">My Orders</a>
-                                <a class="dropdown-item" href="#">Change Password</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cart.php">Cart</a>
-                        </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">My Orders</a>
+                            <a class="dropdown-item" href="#">Change Password</a>
+                            <?php if(isset($_COOKIE['type']) && $_COOKIE['type'] == 1) { ?>
+                                <a class="dropdown-item" href="add_product.php">Add Product</a>
+                            <?php } ?>
+
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.php">Cart</a>
+                    </li>
                     </ul>
                 <?php } ?>
 
