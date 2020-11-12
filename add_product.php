@@ -45,6 +45,17 @@
                     <span class="error"><?php echo $descErr;?> </span> <br>
                 </div>
                 <div class="form-group">
+                    <select name="category" class="form-control" style="color:#757575">
+                      <option value="Empty"> --- Select Category ---</option>
+                      <option value="Guitar">Guitar</option>
+                      <option value="Keyboard">Keyboard</option>
+                      <option value="Flute">Flute</option>
+                      <option value="Drum">Drum</option>
+                      <option value="Books">Books</option>
+                      <option value="Accessories">Accessories</option>
+                    </select> <br>
+                </div>
+                <div class="form-group">
                     <input class="form-control pt-4 pb-4" type="number" placeholder="Price" name="price" value="<?php echo $price;?>" />
                     <span class="error"><?php echo $priceErr;?> </span> <br>
                 </div>

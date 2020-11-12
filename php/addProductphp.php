@@ -23,6 +23,8 @@
         else
           $desc = test_input($_POST["desc"]);
 
+        // Category
+        $category = $_POST["category"];
         // price
         if (empty($_POST["price"]))
             $priceErr = "* Price is required";
@@ -52,7 +54,7 @@
             $uid = uniqid();
             $db = mysqli_connect('localhost','root','', 'mini_project') or die('Error in connect to MySQl Server');
 
-            $order = "INSERT INTO product(product_id, name, description, price, quantity) VALUES ('$uid', '$name', '$desc', '$price', '$quantity')";
+            $order = "INSERT INTO product(product_id, name, category,description, price, quantity) VALUES ('$uid', '$name', '$desc', '$category','$price', '$quantity')";
             $result = mysqli_query($db, $order);
 
             if($result)
