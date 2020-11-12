@@ -12,34 +12,48 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/homeSellerStyles.css">
+        <style>
+            .error {
+                color: #FF0000;
+                font-size: 13px;
+            }
+        </style>
 
     </head>
+
+    <?php include 'php/homeSellerphp.php'; ?>
+
     <body>
         <p class="display-4 text-center pt-2">Seller Page</p>
         <p class="text-center lead" >Add Product</p>
 
 
         <div class="col-md-8 offset-md-2 ">
-            <form>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <span>Add Photo</span>
                 <div class="form-group pt-2">
                     <label class="btn btn-block btn-success">
-                        <input type="file" name="photo" accept="image" placeholder="choose a file"/>
+                        <input type="file" name="photo" placeholder="choose a file"/>
                     </label>
                 </div>
                 <div class="form-group">
-                    <input class="form-control pt-4 pb-4 " type="text" placeholder="Name" />
+                    <input class="form-control pt-4 pb-4 " type="text" placeholder="Name" name="name" value="<?php echo $name;?>"/>
+                    <span class="error"><?php echo $nameErr;?> </span> <br>
                 </div>
                 <div class="form-group">
-                    <input class="form-control pt-4 pb-4" type="text" placeholder="Description"/>
+                    <input class="form-control pt-4 pb-4" type="text" placeholder="Description" name="desc" value="<?php echo $desc;?>"/>
+                    <span class="error"><?php echo $descErr;?> </span> <br>
                 </div>
                 <div class="form-group">
-                    <input class="form-control pt-4 pb-4" type="number" placeholder="Price" />
+                    <input class="form-control pt-4 pb-4" type="number" placeholder="Price" name="price" value="<?php echo $price;?>" />
+                    <span class="error"><?php echo $priceErr;?> </span> <br>
                 </div>
                 <div class="form-group">
-                    <input class="form-control pt-4 pb-4" type="number" placeholder="Quantity"  />
+                    <input class="form-control pt-4 pb-4" type="number" placeholder="Quantity" name="quantity" value="<?php echo $quantity;?>" />
+                    <span class="error"><?php echo $quantityErr;?> </span> <br>
                 </div>
-                <button class="btn btn-outline-primary mb-3 text-large" type="submit">Create Product</button>
+                
+                <input type="submit" class="btn btn-outline-primary mb-3 text-large" name="submit" value="Add Product">
 
             </form>
         </div>
