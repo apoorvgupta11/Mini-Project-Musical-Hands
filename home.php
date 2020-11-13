@@ -154,7 +154,7 @@
         <br>
         <div class="heading"> Today's Deal</div>
         <br>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-3">
                 <div class="card shadow ml-5 pt-3" style="width: 19rem;">
                     <div class="todays_deal">Today's Deal</div>
@@ -163,7 +163,7 @@
                         <h5 class="card-title">₹ 17999</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, J-45 Studio -Antique Natural RS4SANN19</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -176,7 +176,7 @@
                         <h5 class="card-title">₹ 17700</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, L-00 Studio -Antique Natural LSLSANN19</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@
                         <h5 class="card-title">₹ 23380</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar,Humminbird, Walnut Burst AGHBWBN19</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -202,13 +202,61 @@
                         <h5 class="card-title">₹ 47069</h5>
                         <p class="card-text">Epiphone, Electric Guitar, Les Paul Muse-Scarlett Red Metallic ENMLSRMNH1</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <?php
+            $db = mysqli_connect('localhost','root','', 'mini_project') or die('Error in connect to MySQl Server');
+            $query = "SELECT * FROM product ORDER BY RAND() LIMIT 4";
+            $result = mysqli_query($db, $query);
+        ?>
+
+        <div class="row">
+        <?php while($row = mysqli_fetch_assoc($result)) {  ?>
+             <div class="col-md-3">
+                 <div class="card shadow ml-5 pt-3" style="width: 19rem;">
+                     <div class="todays_deal">Today's Deal</div>
+                     <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
+                     <div class="card-body">
+                         <h5 class="card-title"> ₹<?php echo "<s>".$row["price"]."</s>"; $dis = $row["price"]-($row["price"]*0.1); echo  " ₹" .$dis; ?> </h5>
+                         <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
+                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
+                     </div>
+                 </div>
+             </div>
+          <?php } ?>
         </div>
 
+        <!-- New Arrivals -->
+        <?php
+            $db = mysqli_connect('localhost','root','', 'mini_project') or die('Error in connect to MySQl Server');
+            $query = "SELECT * FROM product ORDER  BY timestamp DESC LIMIT 4";
+            $result = mysqli_query($db, $query);
+        ?>
+
         <br>
+        <div class="heading"> New Arrivals</div>
+        <br>
+        <div class="row">
+        <?php while($row = mysqli_fetch_assoc($result)) {  ?>
+            <div class="col-md-3">
+                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
+                <div class="todays_deal">Today's Deal</div>
+                <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
+                <div class="card-body">
+                <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
+                <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
+                <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
+                </div>
+                </div>
+            </div>
+        <?php } ?>
+        </div>
+
+        <!-- <br>
         <div class="heading"> New Arrivals</div>
         <br>
         <div class="row">
@@ -220,7 +268,7 @@
                         <h5 class="card-title">₹ 17999</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, J-45 Studio -Antique Natural RS4SANN19</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -233,7 +281,7 @@
                         <h5 class="card-title">₹ 17700</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar, L-00 Studio -Antique Natural LSLSANN19</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -246,7 +294,7 @@
                         <h5 class="card-title">₹ 23380</h5>
                         <p class="card-text">Gibson, Acoustic Electric Guitar,Humminbird, Walnut Burst AGHBWBN19</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -259,11 +307,11 @@
                         <h5 class="card-title">₹ 47069</h5>
                         <p class="card-text">Epiphone, Electric Guitar, Les Paul Muse-Scarlett Red Metallic ENMLSRMNH1</p>
                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                        <!-- <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a> -->
+                        <a href="#" class="btn btn-outline-warning ml-5">Buy Now</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </body>
 

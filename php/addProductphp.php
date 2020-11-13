@@ -54,7 +54,7 @@
             $uid = uniqid();
             $db = mysqli_connect('localhost','root','', 'mini_project') or die('Error in connect to MySQl Server');
 
-            $order = "INSERT INTO product(product_id, name, category,description, price, quantity, timestamp) VALUES ('$uid', '$name', '$desc', '$category','$price', '$quantity', CURRENT_TIMESTAMP())";
+            $order = "INSERT INTO product(product_id, name,description, category ,price, quantity, timestamp) VALUES ('$uid', '$name', '$desc', '$category','$price', '$quantity', CURRENT_TIMESTAMP())";
             $result = mysqli_query($db, $order);
 
             if($result)
