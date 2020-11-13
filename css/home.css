@@ -38,6 +38,13 @@ html, body {
   /* transform: rotate(-40deg); */
 }
 
+.new_arrivals{
+    width: 130px;
+    text-align: center;
+    color: #fff;
+    background-color: #FF3B30;
+    border-radius: 3px;
+}
 /* MODAL */
 
 .modal {

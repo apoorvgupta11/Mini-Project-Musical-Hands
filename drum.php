@@ -111,9 +111,29 @@
             </form>
         </div>
 
+        <?php
+            $db = mysqli_connect('localhost','root','', 'mini_project') or die('Error in connect to MySQl Server');
+            $query = "SELECT * FROM product WHERE category = 'Drum'";
+            $result = mysqli_query($db, $query);
+        ?>
 
+        <br>
+        <div class="row">
+        <?php while($row = mysqli_fetch_assoc($result)) {  ?>
+            <div class="col-md-2 mr-3 ml-3">
+                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
+                <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
+                <div class="card-body">
+                <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
+                <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
+                <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
+                </div>
+                </div>
+            </div>
+        <?php } ?>
+        </div>
+        
         <!-- Card -->
-        <!-- Today's Deal -->
         <br>
         <br>
         <div class="row">

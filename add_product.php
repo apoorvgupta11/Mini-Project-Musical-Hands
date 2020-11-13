@@ -11,7 +11,7 @@
 
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/homeSellerStyles.css">
+        <link rel="stylesheet" href="css/addProductStyles.css">
         <style>
             .error {
                 color: #FF0000;

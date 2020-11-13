@@ -244,7 +244,7 @@
         <?php while($row = mysqli_fetch_assoc($result)) {  ?>
             <div class="col-md-3">
                 <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                <div class="todays_deal">Today's Deal</div>
+                <div class="new_arrivals">New Arrivals</div>
                 <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
                 <div class="card-body">
                 <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
