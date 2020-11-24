@@ -1,4 +1,51 @@
-<?php session_start(); ?>
+<?php
+session_start();
+require_once("dbcontroller.php");
+$db_handle = new DBController();
+	if(!empty($_GET["action"])) {
+		switch($_GET["action"]) {
+			case "add":
+				if(!empty($_POST["quantity"])) {
+					$productById = $db_handle->runQuery("SELECT * FROM product WHERE product_id='" . $_GET["id"] . "'");
+
+					$itemArray = array($productById[0]["product_id"]=>array('name'=>$productById[0]["name"], 'description'=>$productById[0]["description"], 'product_id'=>$productById[0]["product_id"], 'quantity'=>$_POST["quantity"], 'price'=>$productById[0]["price"], 'image'=>$productById[0]["image"]));
+
+					if(!empty($_SESSION["project_cart"])) {
+						if(in_array($productById[0]["product_id"],array_keys($_SESSION["project_cart"]))) {
+							foreach($_SESSION["project_cart"] as $k => $v) {
+									if($productById[0]["product_id"] == $k) {
+										if(empty($_SESSION["project_cart"][$k]["quantity"])) {
+											$_SESSION["project_cart"][$k]["quantity"] = 0;
+										}
+										$_SESSION["project_cart"][$k]["quantity"] += $_POST["quantity"];
+									}
+							}
+						} else {
+							$_SESSION["project_cart"] = array_merge($_SESSION["project_cart"],$itemArray);
+						}
+					} else {
+						$_SESSION["project_cart"] = $itemArray;
+					}
+				}
+			break;
+			case "remove":
+				if(!empty($_SESSION["project_cart"])) {
+					foreach($_SESSION["project_cart"] as $k => $v) {
+							if($_GET["id"] == $k)
+								unset($_SESSION["project_cart"][$k]);
+							if(empty($_SESSION["project_cart"]))
+								unset($_SESSION["project_cart"]);
+					}
+				}
+			break;
+			case "empty":
+				unset($_SESSION["project_cart"]);
+			break;
+		}
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,29 +78,36 @@
                         <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                     </li>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            INSTRUMENTS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-center" href="guitar.php">Guitar</a>
+                            <a class="dropdown-item text-center" href="keyboard.php">Keyboard</a>
+                            <a class="dropdown-item text-center" href="wind.php">Flute</a>
+                            <a class="dropdown-item text-center" href="drum.php">Drum</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  href="books.php">BOOKS </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  href="accessories.php">ACCESSORIES </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  href="#">BLOG </a>
+                    </li>
+
                     <?php if(isset($_SESSION['location']) && !empty($_SESSION['location'])){ ?>
                         <li class="nav-item active ">
                             <a class="nav-link" onclick="document.getElementById('modal-wrapper').style.display='block'"> <img src="images/placeholder.png" height="17px;" alt="No "> <?php echo $_SESSION['location']; ?> </a>
                         </li>
                     <?php } ?>
-
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>-->
                 </ul>
-
-                <!-- Modal -->
-                <div id="modal-wrapper" class="modal">
-                    <form class="modal-content animate" action="helper_files/location_session.php" method="post">
-                        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp" style="margin-top:15px">&times;</span>
-                        <h4 style="text-align:center; margin-top:15px;">Enter your Location</h4>
-
-                        <br>
-                        <input type="text" name="location">
-                        <br>
-                        <input type="submit" name="submit" value="Save">
-                    </form>
-                </div>
 
                 <?php if(!isset($_COOKIE['username'])) { ?>
                     <ul class="navbar-nav ml-auto">
@@ -66,98 +120,117 @@
                     </ul>
                 <?php } else { ?>
                     <ul class="navbar-nav ml-auto">
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 My Account
                             </a>
+
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">My Orders</a>
-                                <a class="dropdown-item" href="#">Change Password</a>
+                                <?php if(isset($_COOKIE['type']) && $_COOKIE['type'] == 1) { ?>
+                                    <a class="dropdown-item" href="add_product.php">Add Product</a>
+                                <?php } ?>
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
                             </div>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="cart.php">Cart</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="helper_files/logoutcookie_session.php">Logout</a>
-                        </li> -->
-
                     </ul>
                 <?php } ?>
             </div>
         </nav>
 
-        <!-- Cart Strip -->
-        <div class="row">
-            <div class="col-sm-1">
-                <!-- Empty -->
-            </div>
-            <div class="col-sm-10">
-                <div class="shoppingCart ">
-                    <div class="item ">
-                        <div class="row">
-                            <div class="col-sm-1 mt-4" >
-                                <div class="remove">
-                                    <button class="btn btn-outline-danger" name="button">X</button>
-                                </div>
-                            </div>
+        <!-- Modal -->
+        <div id="modal-wrapper" class="modal">
+            <form class="modal-content animate" action="helper_files/location_session.php" method="post">
+                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp" style="margin-top:15px">&times;</span>
+                <h4 style="text-align:center; margin-top:15px;">Enter your Location</h4>
 
-                            <div class="col-sm-4" >
-                                <img src="images/drums.jpg" alt="" height="100px">
-                                <ImageHelper product={product}/>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div class="description">
-                                    <div> Music Title </div>
-                                    <div class="">Music Description</div>
-                                </div>
-                            </div>
-
-                            <!-- <div class="col-sm-3 d-flex justify-content-center">
-                                <div class="row ">
-                                        <button
-                                            class="btn"
-                                            onClick={() => {
-                                                setCount(count-1);
-                                                updateCart(product, count-1);
-                                                setReload(!reload)  //to reload totalPrice
-                                            }}
-                                            disabled={count === 1}
-                                            >-</button>
-                                        <div class="count" >{cardCount}</div>
-                                        <button
-                                            class="btn"
-                                            onClick={() => {
-                                                setCount(count+1);
-                                                updateCart(product, count+1);
-                                                setReload(!reload)
-                                            }}
-                                            disabled={count === 10}
-                                            >+</button>
-                                </div>
-                            </div> -->
-
-                            <div class="col-sm-2  ">
-                                <div class="totalPrice"> 656</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            <p class="text-center">Bill</p>
-
-            </div>
-
-            <div class="col-sm-1">
-                <!-- Empty -->
-            </div>
-
+                <br>
+                <input type="text" name="location">
+                <br>
+                <input type="submit" name="submit" value="Save">
+            </form>
         </div>
 
+        <?php //print_r($_SESSION); ?>
 
+        <a id="btnEmpty" href="cart.php?action=empty">Empty Cart</a>
+
+        <!-- Cart Strip -->
+        <div class="row">
+            <div class="col-sm-1"> <!-- Empty --> </div>
+
+            <div class="col-sm-10">
+                <div class="shoppingCart ">
+                    <?php
+                        if(isset($_SESSION["project_cart"])){
+                            $total_quantity = 0;
+                            $total_price = 0;
+
+                            foreach ($_SESSION["project_cart"] as $item){
+                                $item_price = $item["quantity"]*$item["price"];
+                    ?>
+
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-1 mt-4">
+                                <div class="remove">
+                                    <a href="cart.php?action=remove&id=<?php echo $item["product_id"]; ?>" class="btn btn-outline-danger">X</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <img src="<?php echo $item["image"]; ?>" alt="" height="100px">
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="description">
+                                    <div> <?php echo $item["name"]; ?> </div>
+                                    <div class=""><?php echo $item["description"]; ?></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-1">
+                                <div class="totalPrice"> <?php echo $item["quantity"]; ?> </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="totalPrice"> <?php echo "₹".$item["price"]; ?></div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="totalPrice"> <?php echo "₹". number_format($item_price,2); ?></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <?php
+                            $total_quantity += $item["quantity"];
+                            $total_price += ($item["price"]*$item["quantity"]);
+                        }
+                    ?>
+
+                </div> <br>
+
+                <div class="ml-auto">
+                    Total Quantity: <?php echo $total_quantity; ?> <br><br>
+                    Total Amount  : <h3 class="ml-auto"> <?php echo "₹".number_format($total_price, 2); ?> </h3>
+
+                    <?php } else { ?>
+                    <div class="no-records">Your Cart is Empty</div>
+                    <?php } ?>
+                </div>
+            </div>
+
+            <div class="col-sm-1"><!-- Empty --></div>
+
+        </div>
     </body>
 </html>

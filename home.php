@@ -79,26 +79,25 @@
                 <?php } else { ?>
                     <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            My Account
-                        </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                My Account
+                            </a>
 
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">My Orders</a>
-                            <a class="dropdown-item" href="#">Change Password</a>
-                            <?php if(isset($_COOKIE['type']) && $_COOKIE['type'] == 1) { ?>
-                                <a class="dropdown-item" href="add_product.php">Add Product</a>
-                            <?php } ?>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">My Orders</a>
+                                <?php if(isset($_COOKIE['type']) && $_COOKIE['type'] == 1) { ?>
+                                    <a class="dropdown-item" href="add_product.php">Add Product</a>
+                                <?php } ?>
 
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
-                        </div>
-                    </li>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
+                            </div>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.php">Cart</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.php">Cart</a>
+                        </li>
                     </ul>
                 <?php } ?>
 
@@ -216,17 +215,26 @@
 
         <div class="row">
         <?php while($row = mysqli_fetch_assoc($result)) {  ?>
-             <div class="col-md-3">
-                 <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                     <div class="todays_deal">Today's Deal</div>
-                     <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
-                     <div class="card-body">
-                         <h5 class="card-title"> ₹<?php echo "<s>".$row["price"]."</s>"; $dis = $row["price"]-($row["price"]*0.1); echo  " ₹" .$dis; ?> </h5>
-                         <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
-                         <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                     </div>
-                 </div>
-             </div>
+            <div class="col-md-3">
+                <form method="post" action="cart.php?action=add&id=<?php echo $row["product_id"]; ?>" >
+                    <div class="card shadow ml-5 pt-3" style="width: 19rem;">
+                    <div class="todays_deal">Today's Deal</div>
+                    <img class="card-img-top" src="<?php echo $row["image"]; ?>" alt="Card image cap" width="200px">
+                    <div class="card-body">
+	                    <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
+                        <!-- <h5 class="card-title"> ₹<?php echo "<s>".$row["price"]."</s>"; $dis = $row["price"]-($row["price"]*0.1); echo  " ₹" .$dis; ?> </h5> -->
+	                    <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
+                        <div class="form-inline">
+                            <span class="input-group-btn">
+                                <input type="text" class="ml-0 mr-0" name="quantity" value="1" size="2">
+                                <input type="submit" value="Add to Cart" class="btn btn-outline-primary ml-5 mr-0" />
+                            </span>
+                        </div>
+                    </div>
+                    </div>
+                </form>
+            </div>
+
           <?php } ?>
         </div>
 
@@ -241,17 +249,25 @@
         <div class="heading"> New Arrivals</div>
         <br>
         <div class="row">
-        <?php while($row = mysqli_fetch_assoc($result)) {  ?>
+        <?php while($row = mysqli_fetch_assoc($result)) { ?>
+
             <div class="col-md-3">
-                <div class="card shadow ml-5 pt-3" style="width: 19rem;">
-                <div class="new_arrivals">New Arrivals</div>
-                <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
-                <div class="card-body">
-                <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
-                <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
-                <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                </div>
-                </div>
+                <form method="post" action="cart.php?action=add&id=<?php echo $row["product_id"]; ?>" >
+                    <div class="card shadow ml-5 pt-3" style="width: 19rem;">
+                    <div class="new_arrivals">New Arrivals</div>
+                    <img class="card-img-top" src="<?php echo $row["image"]; ?>" alt="Card image cap" width="200px">
+                    <div class="card-body">
+                        <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
+                        <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
+                        <div class="form-inline">
+                            <span class="input-group-btn">
+                                <input type="text" class="ml-0 mr-0" name="quantity" value="1" size="2">
+                                <input type="submit" value="Add to Cart" class="btn btn-outline-primary ml-5 mr-0" />
+                            </span>
+                        </div>
+                    </div>
+                    </div>
+                </form>
             </div>
         <?php } ?>
         </div>
@@ -315,19 +331,23 @@
 
     </body>
 
-
     <script type="text/javascript">
 
         <?php if(!isset($_SESSION['location']) && empty($_SESSION['location'])){ ?>
             window.onload(document.getElementById('modal-wrapper').style.display='block')
         <?php } ?>
 
-
         var modal = document.getElementById('modal-wrapper');
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+        }
+
+        function addProd() {
+            sessionStorage.SessionName = "SessionData";
+            sessionStorage.getItem("SessionName");
+            sessionStorage.setItem("SessionName","SessionData");
         }
     </script>
 </html>

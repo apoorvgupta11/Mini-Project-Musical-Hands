@@ -84,7 +84,6 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">My Orders</a>
-                                <a class="dropdown-item" href="#">Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
                             </div>
@@ -121,14 +120,21 @@
         <div class="row">
         <?php while($row = mysqli_fetch_assoc($result)) {  ?>
             <div class="col-md-2 mr-3 ml-3">
-                <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                <img class="card-img-top" src="images/guitar/guitar1.jpg" alt="Card image cap" name="img_scr" value="images/guitar/guitar1.jpg">
-                <div class="card-body">
-                <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
-                <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
-                <a href="cart.php" class="btn btn-outline-primary">Add To Cart</a>
-                </div>
-                </div>
+                <form method="post" action="cart.php?action=add&id=<?php echo $row["product_id"]; ?>" >
+                    <div class="card shadow ml-5 pt-3" style="width: 15rem;">
+                    <img class="card-img-top" src="<?php echo $row["image"]; ?>" alt="Card image cap" width="200px">
+                    <div class="card-body">
+                        <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
+                        <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
+                        <div class="form-inline">
+                            <span class="input-group-btn">
+                                <input type="text" class="ml-0 mr-0" name="quantity" value="1" size="2">
+                                <input type="submit" value="Add to Cart" class="btn btn-outline-primary ml-4 mr-0" />
+                            </span>
+                        </div>
+                    </div>
+                    </div>
+                </form>
             </div>
         <?php } ?>
         </div>
