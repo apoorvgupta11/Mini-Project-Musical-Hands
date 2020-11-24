@@ -1,7 +1,11 @@
-<?php
-session_start();
-require_once("dbcontroller.php");
-$db_handle = new DBController();
+<?php if(!isset($_COOKIE['username'])) {
+		header("Location: http://localhost/WP2/Mini%20Project/login.php");
+	}
+
+
+	session_start();
+	require_once("dbcontroller.php");
+	$db_handle = new DBController();
 	if(!empty($_GET["action"])) {
 		switch($_GET["action"]) {
 			case "add":
@@ -167,6 +171,7 @@ $db_handle = new DBController();
             <div class="col-sm-1"> <!-- Empty --> </div>
 
             <div class="col-sm-10">
+				<h3 style="margin-left:500px"> Product &emsp;&emsp; Qty. &emsp; Unit Price &emsp;&emsp; Price</h3>
                 <div class="shoppingCart ">
                     <?php
                         if(isset($_SESSION["project_cart"])){
@@ -219,14 +224,12 @@ $db_handle = new DBController();
 
                 </div> <br>
 
-                <div class="ml-auto">
-                    Total Quantity: <?php echo $total_quantity; ?> <br><br>
-                    Total Amount  : <h3 class="ml-auto"> <?php echo "₹".number_format($total_price, 2); ?> </h3>
+                Total Quantity: <?php echo $total_quantity; ?> <br><br>
+                Total Amount  : <h3 class="ml-auto"> <?php echo "₹".number_format($total_price, 2); ?> </h3>
 
-                    <?php } else { ?>
-                    <div class="no-records">Your Cart is Empty</div>
-                    <?php } ?>
-                </div>
+                <?php } else { ?>
+                <div class="no-records">Your Cart is Empty</div>
+                <?php } ?>
             </div>
 
             <div class="col-sm-1"><!-- Empty --></div>
