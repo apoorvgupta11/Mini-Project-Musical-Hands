@@ -79,7 +79,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active ">
-                        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home.php">HOME <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -172,7 +172,7 @@
 
         <?php //print_r($_SESSION); ?>
 
-        <a id="btnEmpty" href="cart.php?action=empty">Empty Cart</a>
+        <!-- <a id="btnEmpty" href="cart.php?action=empty">Empty Cart</a> -->
 
         <!-- Cart Strip -->
         <div class="row">
@@ -235,6 +235,16 @@
                 Total Quantity: <?php echo $total_quantity; ?> <br><br>
                 Total Amount  : <h3 class="ml-auto"> <?php echo "₹".number_format($total_price, 2); ?> </h3>
 
+				<!-- <a id="btnEmpty" href="cart.php?action=empty" >Checkout</a> -->
+
+				<a id="btnEmpty" href="cart.php?action=empty" onclick="document.getElementById('modal-checkout').style.display='block'">Checkout </a>
+
+				<div id="modal-checkout" class="modal">
+	                <span onclick="document.getElementById('modal-checkout').style.display='none'" class="close" title="Close PopUp" style="margin-top:15px">&times;</span>
+	                <h4 style="text-align:center; margin-top:15px;">Order Booked</h4> <br>
+	                <input type="submit" name="submit" value="Ok">
+		        </div>
+
                 <?php } else { ?>
                 <div class="no-records">Your Cart is Empty</div>
                 <?php } ?>
@@ -244,4 +254,12 @@
 
         </div>
     </body>
+	<script type="text/javascript">
+	var modalC = document.getElementById('modal-checkout');
+	window.onclick = function(event) {
+		if (event.target == modalC) {
+			modal.style.display = "none";
+		}
+	}
+	</script>
 </html>

@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <title>Blog</title>
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/blogStyles.css">
 
