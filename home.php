@@ -93,12 +93,12 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">My Orders</a>
+                                <!-- <a class="dropdown-item" href="#">My Orders</a> -->
                                 <?php if(isset($_COOKIE['type']) && $_COOKIE['type'] == 1) { ?>
                                     <a class="dropdown-item" href="add_product.php">Add Product</a>
                                 <?php } ?>
 
-                                <div class="dropdown-divider"></div>
+                                <!-- <div class="dropdown-divider"></div> -->
                                 <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
                             </div>
                         </li>

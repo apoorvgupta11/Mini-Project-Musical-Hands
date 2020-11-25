@@ -91,8 +91,8 @@
                                 My Account
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">My Orders</a>
-                                <div class="dropdown-divider"></div>
+                                <!-- <a class="dropdown-item" href="#">My Orders</a>
+                                <div class="dropdown-divider"></div> -->
                                 <a class="dropdown-item" href="helper_files/logoutcookie_session.php">Logout</a>
                             </div>
                         </li>
