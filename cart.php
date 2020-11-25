@@ -191,7 +191,7 @@
                             </div>
 
                             <div class="col-sm-4">
-                                <img src="<?php echo $item["image"]; ?>" alt="" height="100px">
+                                <img src="<?php echo $item["image"]; ?>" alt="Not Found" onerror=this.src="images/keyboard/keyboard1.jpg" height="100px">
                             </div>
 
                             <div class="col-sm-2">

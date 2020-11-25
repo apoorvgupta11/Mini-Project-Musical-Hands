@@ -122,7 +122,7 @@
             <div class="col-md-2 mr-3 ml-3">
                 <form method="post" action="cart.php?action=add&id=<?php echo $row["product_id"]; ?>" >
                     <div class="card shadow ml-5 pt-3" style="width: 15rem;">
-                    <img class="card-img-top" src="<?php echo $row["image"]; ?>" alt="Card image cap" width="200px">
+                    <img class="card-img-top" src="<?php echo $row["image"]; ?>" alt="Not Found" onerror=this.src="images/keyboard/keyboard1.jpg" width="200px">
                     <div class="card-body">
                         <h5 class="card-title"> ₹<?php echo $row["price"];  ?> </h5>
                         <p class="card-text"><b> <?php echo $row["name"];  ?> </b> <br> <?php echo $row["description"];  ?> </p>
