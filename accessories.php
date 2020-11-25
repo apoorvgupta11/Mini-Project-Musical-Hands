@@ -56,13 +56,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link"  href="#">BLOG </a>
+                        <a class="nav-link"  href="blog.php">BLOG </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link"  href="About.php">ABOUT US </a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link"  href="Contact.php">CONTACT US </a>
                     </li>

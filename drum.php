@@ -56,7 +56,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link"  href="#">BLOG </a>
+                        <a class="nav-link"  href="blog.php">BLOG </a>
                     </li>
 
                     <li class="nav-item">
@@ -66,7 +66,7 @@
                     <li class="nav-item">
                         <a class="nav-link"  href="Contact.php">CONTACT US </a>
                     </li>
-                    
+
                     <?php if(isset($_SESSION['location']) && !empty($_SESSION['location'])){ ?>
                         <li class="nav-item active ">
                             <a class="nav-link" onclick="document.getElementById('modal-wrapper').style.display='block'"> <img src="images/placeholder.png" height="17px;" alt="No "> <?php echo $_SESSION['location']; ?> </a>
