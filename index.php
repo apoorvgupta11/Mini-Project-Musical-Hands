@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html >
     <head>
@@ -16,7 +17,6 @@
         <link rel="stylesheet" href="css/home.css">
 
     </head>
-    <?php session_start(); ?>
 
     <body>
         <p class="display-4 text-center pt-2"><a style="text-decoration: none; color:black" href="index.php">Musical Hands</a></p>

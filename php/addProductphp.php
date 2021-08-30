@@ -58,7 +58,7 @@
             $result = mysqli_query($db, $order);
 
             if($result)
-                header('Location: http://localhost/WP2/Mini%20Project/home.php');
+                header('Location: http://localhost/WP2/Mini%20Project/index.php');
             else
                 echo "<br/>Input data is fail<br/>";
 
