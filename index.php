@@ -19,7 +19,7 @@
     <?php session_start(); ?>
 
     <body>
-        <p class="display-4 text-center pt-2"><a style="text-decoration: none; color:black" href="home.php">Musical Hands</a></p>
+        <p class="display-4 text-center pt-2"><a style="text-decoration: none; color:black" href="index.php">Musical Hands</a></p>
         <p class="text-center lead" >Start Your Musical Journey here</p>
 
         <!-- Navbar -->

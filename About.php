@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="about">
-        <h1 style="text-align:center"><a style="text-decoration: none; color:white" href="home.php">Musical Hands</a></h1>
+        <h1 style="text-align:center"><a style="text-decoration: none; color:white" href="index.php">Musical Hands</a></h1>
         <h5 style="text-align:center; color:white">Start Your Musical Journey here</h5>
 
         <div class="inner-section">

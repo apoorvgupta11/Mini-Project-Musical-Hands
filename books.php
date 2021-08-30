@@ -19,7 +19,7 @@
     <?php session_start(); ?>
 
     <body>
-        <p class="display-4 text-center pt-2"><a style="text-decoration: none; color:black" href="home.php">Musical Hands</a></p>
+        <p class="display-4 text-center pt-2"><a style="text-decoration: none; color:black" href="index.php">Musical Hands</a></p>
         <p class="text-center lead" >Start Your Musical Journey here</p>
 
         <!-- Navbar -->
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active ">
-                        <a class="nav-link"  href="home.php">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link"  href="index.php">HOME <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item dropdown">
